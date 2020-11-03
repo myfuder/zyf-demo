@@ -1,0 +1,59 @@
+{
+  "name": "ysbao",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build:dev": "vue-cli-service build --mode development",
+    "build:test": "vue-cli-service build --mode testing",
+    "build:local": "vue-cli-service build --mode localhost",
+    "build:prod": "vue-cli-service build --mode production",
+    "build:wkbprod": "vue-cli-service build --mode wkbproduction",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.8.7",
+    "axios": "^0.19.1",
+    "babel-polyfill": "^6.26.0",
+    "core-js": "^3.4.4",
+    "echarts": "^4.7.0",
+    "element-ui": "^2.13.0",
+    "flex.css": "^1.1.7",
+    "html-loader": "^0.5.5",
+    "jquery": "^3.5.1",
+    "vue": "^2.6.10",
+    "vue-amap": "^0.5.10",
+    "vue-router": "^3.1.3",
+    "vuex": "^3.1.2",
+    "xlsx": "^0.15.6"
+  },
+  "devDependencies": {
+    "@babel/helper-compilation-targets": "^7.8.3",
+    "@vue/cli-plugin-babel": "^4.1.0",
+    "@vue/cli-plugin-eslint": "^4.1.0",
+    "@vue/cli-plugin-router": "^4.1.0",
+    "@vue/cli-plugin-vuex": "^4.1.0",
+    "@vue/cli-service": "^4.1.0",
+    "@vue/eslint-config-prettier": "^5.0.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-vue": "^5.0.0",
+    "less": "^3.0.4",
+    "less-loader": "^5.0.0",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
+    "vue-loader": "^15.9.3",
+    "vue-template-compiler": "^2.6.10",
+    "webpack-dev-server": "^3.4.1"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}
